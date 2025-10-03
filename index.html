@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Roller</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="items.js"></script>
+    <script defer src="category_messages.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+    <h1>Event Roller</h1>
+    <div class="name-input">
+        <input type="text" id="customPrefix" placeholder="Enter character name or text prefix...">
+    </div>
+    <div class="dropdown">
+        <button class="dropdown-toggle" onclick="toggleDropdown()">Category Selection</button>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <label><input type="radio" name="category" value="carnivalofsouls" onchange="updateSecondaryDropdown(this.value)"> Carnival of Souls</label>  
+            <label><input type="radio" name="category" value="feastoffools" onchange="updateSecondaryDropdown(this.value)"> Feast of Fools</label>    
+            <label><input type="radio" name="category" value="harvestfestival" onchange="updateSecondaryDropdown(this.value)"> Harvest Festival</label>
+            <label><input type="radio" name="category" value="seasonoflove" onchange="updateSecondaryDropdown(this.value)"> Season of Love</label>
+        </div>
+    </div>
+    <div class="dropdown" id="secondaryDropdown">
+        <button class="dropdown-toggle" onclick="toggleSecondaryDropdown()">Prompt Selection</button>
+        <div class="dropdown-menu" id="secondaryDropdownMenu">
+            <div class="placeholder">Please select a category first</div>
+        </div>
+    </div>
+    <br><button onclick="rollItem()">Roll Results</button>
+    <div id="result"></div>
+    </div>
+    </div>
+</body>
+</html>
