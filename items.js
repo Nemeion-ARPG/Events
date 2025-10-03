@@ -1,11 +1,11 @@
 const itemLists = {
     carnivalofsouls: [
-        { name: "Spectral Bonehound", link: "https://www.deviantart.com/nemeionadmin/art/Spectral-Bonehound-Undead-893784851", weight: 2 },
+        { name: "Spectral Bonehound", link: "https://www.deviantart.com/nemeionadmin/art/Spectral-Bonehound-Undead-893784851", weight: 8 },
         { name: "Fiendish Battle Wounds", link: "https://www.deviantart.com/nemeionadmin/art/Fiendish-Battle-Wounds-893643237", weight: 10 },
         { name: "Mysterious Chest", link: "https://www.deviantart.com/nemeionadmin/art/Mysterious-Chest-893646729", weight: 5 },
         { name: "Cryptic Curse", link: "https://www.deviantart.com/nemeionadmin/art/Cryptic-Curse-990293796", weight: 6 },
         { name: "Wereworm Companion", link: "https://www.deviantart.com/nemeionadmin/art/Wereworm-Companion-999723203", weight: 1 },
-        { name: "Blisteringn Bile", link: "https://www.deviantart.com/nemeionadmin/art/Blistering-Bile-1137290581", weight: 2 },
+        { name: "Blistering Bile", link: "https://www.deviantart.com/nemeionadmin/art/Blistering-Bile-1137290581", weight: 2 },
         { name: "Bag of Teeth", link: "https://www.deviantart.com/nemeionadmin/art/Bag-of-Teeth-1150590638", weight: 5 },
         { name: "Petrified Bat", link: "https://www.deviantart.com/nemeionadmin/art/Petrified-Bat-1247918256", weight: 50 },
         { name: "Bundle of Bones", link: "https://www.deviantart.com/nemeionadmin/art/Bundle-of-Bones-1247918811", weight: 50 },
@@ -37,7 +37,7 @@ const itemLists = {
         { name: "Apple Core", link: "https://www.deviantart.com/nemeionadmin/art/Apple-Core-1149004327", weight: 70 },
         { name: "Dreadful Drought", link: "https://www.deviantart.com/nemeionadmin/art/Dreadful-Drought-1048414234", weight: 3 },
         { name: "Ancient Tablet", link: "https://www.deviantart.com/nemeionadmin/art/Ancient-Tablet-1048407956", weight: 5 },
-        { name: "Cerberus Companion", link: "https://www.deviantart.com/nemeionadmin/art/Cerberus-Black-1048406109", weight: 1 },
+        { name: "Cerberus Companion", link: "https://www.deviantart.com/nemeionadmin/art/Cerberus-Black-1048406109", weight: 6 },
         { name: "Rhodochrosite", link: "https://www.deviantart.com/nemeionadmin/art/Rhodochrosite-937796180", weight: 20 },
         { name: "Warpaints", link: "https://www.deviantart.com/nemeionadmin/art/Warpaints-893785368", weight: 5 },
         { name: "Small Pile of Coins", link: "https://www.deviantart.com/nemeionadmin/art/Small-Pile-of-Coins-893784355", weight: 50 },

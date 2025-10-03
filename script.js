@@ -156,15 +156,18 @@ function rollItem() {
     // Convert counted items to HTML
     const rolledItems = Object.entries(itemCounts)
         .map(([name, data]) => {
-            const countText = ` x${data.count}`; // Always show count, even for single items
-            return `- &nbsp; <a href="${data.link}" target="_blank">${name}${countText}</a><br>`;
+            const countText = `x ${data.count} &nbsp;`; // Always show count, even for single items
+            return `- &nbsp; ${countText} <a href="${data.link}" target="_blank">${name}</a><br>`;
         })
         .join("");
     
-    document.getElementById("result").innerHTML = `
+    const resultHtml = `
         <p><i>${message}</i></p>
         <br>
         ${rolledItems}<p><strong>Don't forget to redeem your items!</strong></p>
+    `;
+    document.getElementById("result").innerHTML = resultHtml + `
+        <button onclick="copyResults()" class="copy-button">Copy Results</button>
     `;
 }
 
@@ -231,6 +234,40 @@ function updateSecondaryDropdown(category) {
             secondaryMenu.querySelector('input').checked = true;
         }
     }
+}
+
+function copyResults() {
+    const resultDiv = document.getElementById("result");
+    const htmlContent = resultDiv.innerHTML.replace(/<button.*?<\/button>/g, ''); // Remove the copy button from copied content
+    
+    // Create a Blob with HTML content
+    const blob = new Blob([htmlContent], { type: 'text/html' });
+    const plainText = resultDiv.innerText.replace('Copy Results', '').trim(); // Remove button text
+    
+    // Create a ClipboardItem with both HTML and plain text formats
+    const data = new ClipboardItem({
+        'text/html': blob,
+        'text/plain': new Blob([plainText], { type: 'text/plain' })
+    });
+    
+    navigator.clipboard.write([data]).then(() => {
+        const copyButton = resultDiv.querySelector('.copy-button');
+        const originalText = copyButton.textContent;
+        copyButton.textContent = 'Copied!';
+        setTimeout(() => {
+            copyButton.textContent = originalText;
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy content: ', err);
+        // Fallback to plain text if HTML copy fails
+        navigator.clipboard.writeText(plainText).then(() => {
+            const copyButton = resultDiv.querySelector('.copy-button');
+            copyButton.textContent = 'Copied (Plain Text)';
+            setTimeout(() => {
+                copyButton.textContent = 'Copy Results';
+            }, 2000);
+        });
+    });
 }
 
 document.addEventListener('click', function (e) {
