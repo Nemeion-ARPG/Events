@@ -190,19 +190,11 @@ function updateSecondaryDropdown(category) {
     // Get available message categories for the selected category
     const messageCategories = categoryMessages[category] || {};
     const options = Object.keys(messageCategories).map(key => {
-        // Format the label to be more user-friendly
-        let label = key.charAt(0).toUpperCase() + key.slice(1);  // Capitalize first letter
-        // Replace specific strings with more friendly names
-        switch(key) {
-            case 'harvestfestival':
-                label = 'Festival Participation';
-                break;
-            case 'harvestcurrency':
-                label = 'Currency Collection';
-                break;
-            default:
-                // For others, just replace camelCase with spaces and capitalize
-                label = label.replace(/([A-Z])/g, ' $1').trim();
+        // Get the display name from messageTypeDisplayNames or fallback to formatted key
+        let label = window.messageTypeDisplayNames?.[key];
+        if (!label) {
+            // Fallback to default formatting if no display name is found
+            label = key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1').trim();
         }
         return {
             value: key,

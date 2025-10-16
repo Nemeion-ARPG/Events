@@ -1,18 +1,43 @@
+// Display names for message types
+window.messageTypeDisplayNames = {
+
+    // Carnival of Souls
+    scene_one: "#1 Masquerade of the Damned",
+    scene_two: "#2 Dissent into Darkness",
+    scene_three: "#3 Colosseum of Chaos",
+    scene_four: "#4 The Garden of Stone",
+    scene_five: "#5 Free for All",
+
+    // Feast of Fools
+    prank: "Masterful Prankster",
+    laughter: "Joyful Celebration",
+    pie: "Pie in the Face",
+
+    // Harvest Festival
+    harvestfestival: "Festival Participation",
+    harvestcurrency: "Currency Collection",
+
+    // Season of Love
+    compassion: "Acts of Compassion",
+    kindness: "Spreading Kindness",
+    romance: "Romantic Encounters"
+};
+
 const categoryMessages = {
     carnivalofsouls: {
-        One: [
+        scene_one: [
             { text: "moved among the dancers, uncertain if the figures beside them were fellow mortals in clever garb or shades risen from Hades’ throne room. For a fleeting moment, the carnival blurred, and the masquerade seemed to peel back its mask, revealing something ancient and dreadful beneath the pageantry. Was this truly a ball… or a test of fate? For their participation in the Masquerade of the Damned, they have received the following:", weight: 2 }
         ],
-        Two: [
+        scene_two: [
             { text: "surged from the dark in a blast of ash and cinders, claws striking the earth as the Underworld’s curse settled into their veins. Their breath steamed like smoke, their eyes burning with Hades’ fire. Each act of destruction seemed to feed the curse, their body growing stronger, their heart growing colder. Yet beneath the frenzy, something still flickered, a trace of who they were before answering Hades’ call. Could it be buried under blood and smoke? Or was it already too late to turn back? For surrendering to the Hellion’s path, they received the following:", weight: 2 }
         ],
-        Three: [
+        scene_three: [
             { text: "thundered into the Colosseum as the ground shook beneath the Hydra’s many heads. Without hesitation, they lunged into the fray, weaving between snapping jaws, claws raking across one scaled neck before dodging the strike of another. Dust and blood filled the air, their every movement a deadly gamble. They fought until the last head collapsed into the sand, the monster’s body writhing before finally lying still. For their victory over the Hydra they have received the following:", weight: 2 }
         ],
-        Four: [
+        scene_four: [
             { text: "froze the moment their paws crossed into Medusa’s garden. The air was thick and heavy, every flicker of lanternlight twisting the shadows into shapes that made their fur bristle. Their eyes darted from statue to statue, and with each glance their chest tightened. The figures looked too real. They stalked to the center of the garden and pressed a paw against one of the statues, claws scraping stone as though daring it to breathe again. They would not be claimed by the Gorgon Queen’s cryptic garden. For daring to stand bold in Medusa’s Garden, they have received the following:", weight: 2 }
         ],
-        Five: [
+        scene_five: [
             { text: "spent the evening [doing what], every shadow stretching long and thin across their path.The forest whispered eerily as they passed, dry leaves rattling like bones, branches bending as if unseen hands were reaching out to touch their fur. Each step was accompanied by the crunch of gravel or the snap of a twig, causing the fur along their nape to rise. A pair of lantern eyes flickered in the darkness, only to vanish before they could draw breath to growl. For surviving their journey through the spooky night, [Nemeion Name] has received the following:", weight: 2 }
         ]
     },
